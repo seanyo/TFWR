@@ -1,2 +1,3 @@
-while true:
+while True:
+    move(North)
     harvest()
