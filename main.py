@@ -1,2 +1,3 @@
-while true:
-    harvest()
+while True:
+    if can_harvest():
+        harvest()
