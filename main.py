@@ -4,15 +4,40 @@ clear()
 #Harvest the Farm
 
 # TODO: Drone skips first two harvests - looks like the can_harvest value is returning false. No idea why. This is sufficient for now. 
+
+# commented out while prototyping farming trees
+# while True:
+#     for column in range(get_world_size()): #Loop over each column
+#             for row in range(get_world_size()): #Loop over each row in each column
+                 
+#                 if can_harvest():
+#                     harvest()
+                
+#                     #till()
+#                     plant(Entities.Bush)
+
+#             move(North)
+#     move(East)
+
+# Farming Trees
+
+def should_plant_tree(x, y):
+    return ((x%2 == 0 and y%2 == 0) or (x%2 == 1 and y%2 == 1))
+
 while True:
     for column in range(get_world_size()): #Loop over each column
-            for row in range(get_world_size()): #Loop over each row in each column
-                 
-                if can_harvest():
-                    harvest()
-                    till()
-                    plant(Entities.Carrot)
+        for row in range(get_world_size()): #Loop over each row in each column
 
-            move(North)
+            # Get current position
+            x = get_pos_x()
+            y = get_pos_y()
+
+            if should_plant_tree(x, y):
+                plant(Entities.Tree)
+                    
+            if can_harvest():
+                harvest()
+
+        move(North)
     move(East)
 
