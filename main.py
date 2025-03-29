@@ -10,7 +10,8 @@ while True:
                  
                 if can_harvest():
                     harvest()
-                    plant(Entities.Bush)
+                    till()
+                    plant(Entities.Carrot)
 
             move(North)
     move(East)
