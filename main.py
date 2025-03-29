@@ -9,7 +9,6 @@ while True:
     for column in range(get_world_size()): #Loop over each column
         #print(column)
         for row in range(get_world_size()): #Loop over each row in each column
-            #print(row)
 
             if get_water() < 0.5:
                 use_item(Items.Water)
