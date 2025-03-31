@@ -3,7 +3,8 @@ clear()
 
 #Harvest the Farm
 
-# TODO: Drone skips first two harvests - looks like the can_harvest value is returning false. No idea why. This is sufficient for now. 
+# TODO: Drone skips first two harvests - looks like the can_harvest 
+# value is returning false. No idea why. This is sufficient for now. 
 
 
 ### Brute for Maze grinding to unlock Simulate with 100 chests
@@ -81,7 +82,7 @@ while True:
 #                 plant(Entities.Bush)
         
 #             if get_entity_type() == Entities.Bush:
-#                 for _ in range(3):  # Or however many times you want
+#                 for _ in range(1):  # Or however many times you want
 #                     use_item(Items.Fertilizer)
 
 #             if get_entity_type() != Entities.Cactus:
